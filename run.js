@@ -11,7 +11,7 @@ const TITLE = 'Node.js Alert'
 
 const IrPin = new Gpio(4, 'in', 'both')
 const PirPin = new Gpio(27, 'in', 'both')
-const relayPin = new Gpio(18, 'out')
+const relayPin = new Gpio(6, 'out')
 
 let IR = false
 let PIR = false
