@@ -4,10 +4,10 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
-const TOKEN = process.env.API_KEY
-const USER = process.env.USER_KEY
-const URL = 'https://api.pushover.net/1/messages.json'
+const URL = 'https://localhost:3000/api/messages.json'
 const TITLE = 'Node.js Alert'
+
+const UID = process.env.UID
 
 const IrPin = new Gpio(4, 'in', 'both')
 const PirPin = new Gpio(27, 'in', 'both')
@@ -52,8 +52,7 @@ PirPin.watch((err, value) => {
             PIR = true
             timer1 = setTimeout(() => {
                 const data = {
-                    token: TOKEN,
-                    user: USER,
+                    key: UID,
                     title: TITLE,
                     message: `Warning: 1`
                 }
@@ -64,8 +63,7 @@ PirPin.watch((err, value) => {
             }, 60000)
             timer2 = setTimeout(() => {
                 const data = {
-                    token: TOKEN,
-                    user: USER,
+                    key: UID,
                     title: TITLE,
                     message: `Warning: 2`,
                     priority: 1
@@ -79,8 +77,7 @@ PirPin.watch((err, value) => {
                 relayPin.writeSync(1)
                 relayState = true
                 const data = {
-                    token: TOKEN,
-                    user: USER,
+                    key: UID,
                     title: TITLE,
                     message: `Warning: 3 => Turning Off`,
                     priority: 1,
