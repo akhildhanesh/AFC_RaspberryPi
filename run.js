@@ -23,7 +23,7 @@ let relayState = false
 IrPin.watch((err, value) => {
     if (err) throw err
 
-    if (value === 1) {
+    if (value) {
         IR = true
         console.log('IR: Object detected!');
     } else {
@@ -39,7 +39,7 @@ IrPin.watch((err, value) => {
 PirPin.watch((err, value) => {
     if (err) throw err
 
-    if (value === 1) {
+    if (value) {
         if (PIR) {
             clearTimeout(timer1)
             clearTimeout(timer2)
