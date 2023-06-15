@@ -44,8 +44,8 @@ PirPin.watch((err, value) => {
             clearTimeout(timer1)
             clearTimeout(timer2)
             clearTimeout(timer3)
+            PIR = false
         }
-        PIR = false
         console.log('PIR: Movement Detected');
     } else {
         if (IR) {
