@@ -5,7 +5,7 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 const URL = 'https://afcd.cloud/api/messages.json'
-const TITLE = 'Node.js Alert'
+const TITLE = 'AFC'
 
 const UID = process.env.UID
 
