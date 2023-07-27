@@ -13,8 +13,8 @@ const UID = process.env.UID // Unique product ID
 const BuzzerPin = new Gpio(27, 'out')
 const relayPin = new Gpio(6, 'out')
 
-const triggerPin = 17
-const echoPin = 18
+const triggerPin = 11
+const echoPin = 15
 
 rpio.init({ gpiomem: true })
 rpio.open(triggerPin, rpio.OUTPUT, rpio.LOW)
