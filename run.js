@@ -16,7 +16,7 @@ const relayPin = new Gpio(6, 'out')
 const triggerPin = 11
 const echoPin = 15
 
-rpio.init({ gpiomem: true })
+rpio.init({ gpiomem: false })
 rpio.open(triggerPin, rpio.OUTPUT, rpio.LOW)
 rpio.open(echoPin, rpio.INPUT)
 
