@@ -22,9 +22,13 @@ rpio.open(echoPin, rpio.INPUT)
 
 
 const measureDistance = () => {
+    console.log('from measure: 1')
+
     rpio.write(triggerPin, rpio.HIGH)
     rpio.usleep(10)
     rpio.write(triggerPin, rpio.LOW)
+
+    console.log('from measure: 2')
 
     while (rpio.read(echoPin) === 0) { }
     const start = process.hrtime.bigint()
