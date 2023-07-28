@@ -56,6 +56,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 async function main() {
     console.log('Monitoring Sensors')
+    relayPin.writeSync(1)
     console.log('ultrasonic: ', measureDistance(), personDetected())
     let timer1, timer2, timer3
     let timerState = false
@@ -91,7 +92,7 @@ async function main() {
                     .catch(e => console.error(e.message))
             }, 20000)
             timer3 = setTimeout(() => {
-                relayPin.writeSync(1)
+                relayPin.writeSync(0)
                 BuzzerPin.writeSync(0)
                 const data = {
                     key: UID,
