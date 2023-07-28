@@ -81,7 +81,7 @@ async function main() {
             }, 10000)
             timer2 = setTimeout(() => {
                 const data = {
-                    key: UID,
+                    uid: UID,
                     title: TITLE,
                     message: `Warning => ......`,
                     priority: 1
@@ -95,7 +95,7 @@ async function main() {
                 relayPin.writeSync(0)
                 BuzzerPin.writeSync(0)
                 const data = {
-                    key: UID,
+                    uid: UID,
                     title: TITLE,
                     message: `OFF`,
                     priority: 1,
