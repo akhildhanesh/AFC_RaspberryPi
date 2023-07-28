@@ -11,7 +11,7 @@ const TITLE = 'AFC' // Pushover Notification Title
 const UID = process.env.UID // Unique product ID
 
 const BuzzerPin = new Gpio(27, 'out')
-const relayPin = new Gpio(6, 'out')
+const relayPin = new Gpio(24, 'out')
 
 const triggerPin = 11
 const echoPin = 15
