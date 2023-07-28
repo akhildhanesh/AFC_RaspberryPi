@@ -33,6 +33,7 @@ const measureDistance = () => {
     console.log('echo Pin', rpio.read(echoPin))
 
     while (rpio.read(echoPin) === 0) { }
+    console.log('after')
     const start = process.hrtime.bigint()
 
     while (rpio.read(echoPin) === 1) { }
