@@ -44,6 +44,7 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 async function main() {
     console.log('Monitoring Sensors')
+    console.log('ultrasonic: ', measureDistance(), personDetected())
     let timer1, timer2, timer3
     let timerState = false
     while (true) {
