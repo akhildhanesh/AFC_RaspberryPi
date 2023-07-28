@@ -67,6 +67,7 @@ async function main() {
                 clearTimeout(timer2)
                 clearTimeout(timer3)
                 timerState = false
+                BuzzerPin.writeSync(0)
                 console.log('Timers: Stopped')
             }
         } else {
@@ -91,7 +92,7 @@ async function main() {
             }, 60000)
             timer3 = setTimeout(() => {
                 relayPin.writeSync(1)
-                relayState = true
+                BuzzerPin.writeSync(0)
                 const data = {
                     key: UID,
                     title: TITLE,
