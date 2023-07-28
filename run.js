@@ -77,7 +77,7 @@ async function main() {
             timer1 = setTimeout(() => {
                 BuzzerPin.writeSync(1)
                 console.log('Buzzer: ON')
-            }, 30000)
+            }, 10000)
             timer2 = setTimeout(() => {
                 const data = {
                     key: UID,
@@ -89,7 +89,7 @@ async function main() {
                     .then(res => res.data)
                     .then(data => console.log(data))
                     .catch(e => console.error(e.message))
-            }, 60000)
+            }, 20000)
             timer3 = setTimeout(() => {
                 relayPin.writeSync(1)
                 BuzzerPin.writeSync(0)
@@ -103,7 +103,7 @@ async function main() {
                     .then(res => res.data)
                     .then(data => console.log(data))
                     .catch(e => console.error(e.message))
-            }, 90000)
+            }, 30000)
         }
     }
 }
