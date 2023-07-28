@@ -36,6 +36,9 @@ const measureDistance = () => {
     while (rpio.read(echoPin) === 1) { }
     const end = process.hrtime.bigint()
 
+    console.log('from measure: 3')
+
+
     const pulseDuration = end - start
     const distance = Number(pulseDuration) / 29.412 / 2 // in cm
 
