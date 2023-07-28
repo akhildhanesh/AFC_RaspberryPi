@@ -32,7 +32,7 @@ const measureDistance = () => {
 
     console.log('echo Pin', rpio.read(echoPin))
 
-    return 50
+    return 500
 
     while (rpio.read(echoPin) === 0) { }
     console.log('after')
